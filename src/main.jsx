@@ -12,11 +12,13 @@ import About from './Components/About.jsx'
 import Contact from './Components/Contact.jsx';
 import Users from './Components/Users.jsx';
 import UserDetails from './Components/UserDetails.jsx';
+import ErrorPage from './Components/ErrorPage.jsx';
 
 const router = new createBrowserRouter([
   {
     path: '/',
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/about',

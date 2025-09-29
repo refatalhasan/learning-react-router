@@ -8,7 +8,9 @@ const Home = () => {
         <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
-                <Outlet />
+                {
+                    NavigationActivation.state === "loading" ? <p>Loading.....</p> : <Outlet></Outlet>
+                }
             </main>
             <Footer />
         </div>

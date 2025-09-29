@@ -5,15 +5,16 @@ const UserDetails = () => {
 
     const userDetails = useLoaderData();
 
-    const {name, website} = userDetails;
+    const { name, website } = userDetails;
 
     return (
         <div>
             <h1>{name}</h1>
             <h1>{website}</h1>
             <h1>
-                <Link to={website}>Website: {website}</Link>
+                Website: <a href={`https://${website}`} target="_blank" rel="noopener noreferrer">{website}</a>
             </h1>
+
         </div>
     );
 };
